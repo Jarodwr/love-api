@@ -329,6 +329,28 @@ return {
                     }
                 }
             }
+        },
+        {
+            name = 'getPackedSize',
+            description = 'Gets the size in bytes that a given format used with love.data.pack will use.\nThis function behaves the same as Lua 5.3\'s string.packsize. ',
+            variants = {
+                {
+                    arguments = {
+                        {
+                            type = 'string',
+                            name = 'format',
+                            description = 'A string determining how the values are packed. Follows the rules of Lua 5.3\'s string.pack format strings.'
+                        }
+                    },
+                    returns = {
+                        {
+                            type = 'number',
+                            name = 'size',
+                            description = 'The size in bytes that the packed data will use.'
+                        }
+                    }
+                }
+            }
         }
     },
     enums = {
