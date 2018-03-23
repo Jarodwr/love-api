@@ -351,6 +351,102 @@ return {
                     }
                 }
             }
+        },
+        {
+            name = 'newByteData',
+            description = 'Creates a new Data object containing arbitrary bytes.\nData:getPointer along with LuaJIT\'s FFI can be used to manipulate the contents of the ByteData object after it has been created. ',
+            variants = {
+                {
+                    arguments = {
+                        {
+                            type = 'string',
+                            name = 'datastring',
+                            description = 'The byte string to copy.'
+                        }
+                    },
+                    returns = {
+                        {
+                            type = 'ByteData',
+                            name = 'bytedata',
+                            description = 'The new Data object.'
+                        }
+                    }
+                },
+                {
+                    arguments = {
+                        {
+                            type = 'Data',
+                            name = 'data',
+                            description = 'The existing Data object to copy.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'offset',
+                            description = 'The offset of the subsection to copy, in bytes.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'size',
+                            description = 'The size in bytes of the new Data object.'
+                        }
+                    },
+                    returns = {
+                        {
+                            type = 'ByteData',
+                            name = 'bytedata',
+                            description = 'The new Data object.'
+                        }
+                    }
+                },
+                {
+                    arguments = {
+                        {
+                            type = 'number',
+                            name = 'size',
+                            description = 'The size in bytes of the new Data object.'
+                        }
+                    },
+                    returns = {
+                        {
+                            type = 'ByteData',
+                            name = 'bytedata',
+                            description = 'The new Data object.'
+                        }
+                    }
+                }
+            }
+        },
+        {
+            name = 'newDataView',
+            description = 'Creates a new Data referencing a subsection of an existing Data object. ',
+            variants = {
+                {
+                    arguments = {
+                        {
+                            type = 'Data',
+                            name = 'data',
+                            description = 'The Data object to reference.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'offset',
+                            description = 'The offset of the subsection to reference, in bytes.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'size',
+                            description = 'The size in bytes of the subsection to reference.'
+                        }
+                    },
+                    returns = {
+                        {
+                            type = 'Data',
+                            name = 'view',
+                            description = 'The new Data view.'
+                        }
+                    }
+                }
+            }
         }
     },
     enums = {
