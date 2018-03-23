@@ -810,6 +810,28 @@ return {
             }
         },
         {
+            name = 'isTouching',
+            description = 'Gets whether the Body is touching the given other Body.',
+            variants = {
+                {
+                    arguments = {
+                        {
+                            type = 'Body',
+                            name = 'otherbody',
+                            description = 'The other body to check.'
+                        },
+                    },
+                    returns = {
+                        {
+                            type = 'boolean',
+                            name = 'touching',
+                            description = 'True if this body is touching the other body, false otherwise.'
+                        }
+                    }
+                }
+            }
+        },
+        {
             name = 'resetMassData',
             description = 'Resets the mass of the body by recalculating it from the mass properties of the fixtures.',
             variants = {
