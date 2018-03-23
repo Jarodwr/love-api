@@ -259,6 +259,7 @@ return {
                 'Text',
                 'Texture',
                 'Thread',
+                'Transform',
                 'Video',
                 'VideoStream',
                 'WeldJoint',

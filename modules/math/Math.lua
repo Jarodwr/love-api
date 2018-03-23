@@ -7,7 +7,8 @@ return {
     types = {
         require(path .. 'types.BezierCurve'),
         require(path .. 'types.CompressedData'),
-        require(path .. 'types.RandomGenerator')
+        require(path .. 'types.RandomGenerator'),
+        require(path .. "types.Transform"),
     },
     functions = {
         {
@@ -528,7 +529,7 @@ return {
             }
         },
         {
-            name = 'newTransformation',
+            name = 'newTransform',
             description = 'Creates a new Transform object.',
             variants = {
                 {
