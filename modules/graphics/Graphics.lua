@@ -1130,6 +1130,56 @@ return {
              }
         },
         {
+            name = 'getPixelDimensions',
+            description = 'Gets the width and height in pixels of the window.\nlove.graphics.getDimensions gets the dimensions of the window in units scaled by the screen\'s DPI scale factor, rather than pixels. Use getDimensions for calculations related to drawing to the screen and using the graphics coordinate system (calculating the center of the screen, for example), and getPixelDimensions only when dealing specifically with underlying pixels (pixel-related calculations in a pixel Shader, for example). ',
+            variants = {
+                {
+                    returns = {
+                        {
+                            type = 'number',
+                            name = 'pixelwidth',
+                            description = 'The width of the window in pixels.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'pixelheight',
+                            description = 'The height of the window in pixels.'
+                        }
+                    }
+                }
+            }
+        },
+        {
+            name = 'getPixelHeight',
+            description = 'Gets the height in pixels of the window.\nThe graphics coordinate system and love.graphics.getHeight use units scaled by the screen\'s DPI scale factor, rather than raw pixels. Use getHeight for calculations related to drawing to the screen and using the coordinate system (calculating the center of the screen, for example), and getPixelHeight only when dealing specifically with underlying pixels (pixel-related calculations in a pixel Shader, for example). ',
+            variants = {
+                {
+                    returns = {
+                        {
+                            type = 'number',
+                            name = 'pixelheight',
+                            description = 'The height of the window in pixels.'
+                        }
+                    }
+                }
+            }
+        },
+        {
+            name = 'getPixelWidth',
+            description = 'Gets the width in pixels of the window.\nThe graphics coordinate system and love.graphics.getWidth use units scaled by the screen\'s DPI scale factor, rather than raw pixels. Use getWidth for calculations related to drawing and using the coordinate system (calculating the center of the screen, for example), and getPixelWidth only when dealing specifically with underlying pixels (pixel-related calculations in a pixel Shader, for example). ',
+            variants = {
+                {
+                    returns = {
+                        {
+                            type = 'number',
+                            name = 'pixelwidth',
+                            description = 'The width of the window in pixels.'
+                        }
+                    }
+                }
+            }
+        },
+        {
             name = 'getShader',
             description = 'Returns the current Shader. Returns nil if none is set.',
             variants = {
