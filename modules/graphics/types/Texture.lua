@@ -64,6 +64,21 @@ return {
             }
         },
         {
+            name = 'getPixelHeight',
+            description = 'Gets the height in pixels of the Texture.\nTexture:getHeight gets the height of the texture in units scaled by the texture\'s DPI scale factor, rather than pixels. Use getHeight for calculations related to drawing the texture (calculating an origin offset, for example), and getPixelHeight only when dealing specifically with pixels, for example when using Canvas:newImageData. ',
+            variants = {
+                {
+                    returns = {
+                        {
+                            type = 'number',
+                            name = 'pixelheight',
+                            description = 'The height of the Texture, in pixels.'
+                        }
+                    }
+                }
+            }
+        },
+        {
             name = 'getPixelWidth',
             description = 'Gets the width in pixels of the Texture.\nTexture:getWidth gets the width of the texture in units scaled by the texture\'s DPI scale factor, rather than pixels. Use getWidth for calculations related to drawing the texture (calculating an origin offset, for example), and getPixelWidth only when dealing specifically with pixels, for example when using Canvas:newImageData. ',
             variants = {
