@@ -161,6 +161,41 @@ return {
             }
         },
         {
+            name = 'getEmissionArea',
+            description = 'Gets the area-based spawn parameters for the particles. ',
+            variants = {
+                {
+                    returns = {
+                        {
+                            type = 'AreaSpreadDistribution',
+                            name = 'distribution',
+                            description = 'The type of distribution for new particles.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'dt',
+                            description = 'The maximum spawn distance from the emitter along the x-axis for uniform distribution, or the standard deviation along the x-axis for normal distribution.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'dy',
+                            description = 'The maximum spawn distance from the emitter along the y-axis for uniform distribution, or the standard deviation along the y-axis for normal distribution.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'angle',
+                            description = 'The angle in radians of the emission area.'
+                        },
+                        {
+                            type = 'boolean',
+                            name = 'directionRelativeToCenter',
+                            description = 'True if newly spawned particles will be oriented relative to the center of the emission area, false otherwise.'
+                        }
+                    }
+                }
+            }
+        },
+        {
             name = 'getEmissionRate',
             description = 'Gets the amount of particles emitted per second.',
             variants = {
