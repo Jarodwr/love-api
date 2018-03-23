@@ -143,8 +143,202 @@ return {
             }
         },
         {
+            name = 'addLayer',
+            description = 'Adds a layer of the SpriteBatch\'s Array Texture.',
+            variants = {
+                {
+                    arguments = {
+                        {
+                            type = 'number',
+                            name = 'layerindex',
+                            description = 'The index of the layer to use for this sprite.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'x',
+                            description = 'The position to draw the object (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'y',
+                            description = 'The position to draw the object (y-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'r',
+                            default = '0',
+                            description = 'Orientation (radians).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'sx',
+                            default = '1',
+                            description = 'Scale factor (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'sy',
+                            default = 'sx',
+                            description = 'Scale factor (y-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'ox',
+                            default = '0',
+                            description = 'Origin offset (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'oy',
+                            default = '0',
+                            description = 'Origin offset (y-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'kx',
+                            default = '0',
+                            description = 'Shear factor (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'ky',
+                            default = '0',
+                            description = 'Shear factor (y-axis).'
+                        }
+                    },
+                    returns = {
+                        {
+                            type = 'number',
+                            name = 'spriteindex',
+                            description = 'The index of the added sprite, for use with SpriteBatch:set or SpriteBatch:setLayer.'
+                        }
+                    }
+                },
+                {
+                    arguments = {
+                        {
+                            type = 'number',
+                            name = 'layerindex',
+                            description = 'The index of the layer to use for this sprite.'
+                        },
+                        {
+                            type = 'Quad',
+                            name = 'quad',
+                            description = 'The Quad to add.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'x',
+                            description = 'The position to draw the object (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'y',
+                            description = 'The position to draw the object (y-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'r',
+                            default = '0',
+                            description = 'Orientation (radians).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'sx',
+                            default = '1',
+                            description = 'Scale factor (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'sy',
+                            default = 'sx',
+                            description = 'Scale factor (y-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'ox',
+                            default = '0',
+                            description = 'Origin offset (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'oy',
+                            default = '0',
+                            description = 'Origin offset (y-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'kx',
+                            default = '0',
+                            description = 'Shear factor (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'ky',
+                            default = '0',
+                            description = 'Shear factor (y-axis).'
+                        }
+                    },
+                    returns = {
+                        {
+                            type = 'number',
+                            name = 'spriteindex',
+                            description = 'The index of the added sprite, for use with SpriteBatch:set or SpriteBatch:setLayer.'
+                        }
+                    }
+                },
+                {
+                    arguments = {
+                        {
+                            type = 'number',
+                            name = 'layerindex',
+                            description = 'The index of the layer to use for this sprite.'
+                        },
+                        {
+                            type = 'Transform',
+                            name = 'transform',
+                            description = 'A transform object.'
+                        },
+                    },
+                    returns = {
+                        {
+                            type = 'number',
+                            name = 'spriteindex',
+                            description = 'The index of the added sprite, for use with SpriteBatch:set or SpriteBatch:setLayer.'
+                        }
+                    }
+                },
+                {
+                    arguments = {
+                        {
+                            type = 'number',
+                            name = 'layerindex',
+                            description = 'The index of the layer to use for this sprite.'
+                        },
+                        {
+                            type = 'Quad',
+                            name = 'quad',
+                            description = 'The Quad to add.'
+                        },
+                        {
+                            type = 'Transform',
+                            name = 'transform',
+                            description = 'A transform object.'
+                        },
+                    },
+                    returns = {
+                        {
+                            type = 'number',
+                            name = 'spriteindex',
+                            description = 'The index of the added sprite, for use with SpriteBatch:set or SpriteBatch:setLayer.'
+                        }
+                    }
+                }
+            }
+        },
+        {
             name = 'attachAttribute',
-            description = 'Attaches a per-vertex attribute from a Mesh onto this SpriteBatch, for use when drawing. This can be combined with a Shader to augment a SpriteBatch with per-vertex or additional per-sprite information instead of just having per-sprite colors.\n\nEach sprite in a SpriteBatch has 4 vertices in the following order: top-left, bottom-left, top-right, bottom-right. The index returned by SpriteBatch:add (and used by SpriteBatch:set) can used to determine the first vertex of a specific sprite with the formula "1 + 4 * ( id - 1 )".',
+            description = 'Attaches a per-vertex attribute from a Mesh onto this SpriteBatch, for use when drawing. This can be combined with a Shader to augment a SpriteBatch with per-vertex or additional per-sprite information instead of just having per-sprite colors.\n\nEach sprite in a SpriteBatch has 4 vertices in the following order: top-left, bottom-left, top-right, bottom-right. The index returned by SpriteBatch:add (and used by SpriteBatch:set) can be multiplied by 4 to determine the first vertex in a specific sprite.',
             variants = {
                 {
                     arguments = {
@@ -430,6 +624,215 @@ return {
                 },
                 {
                     description = 'Disables all per-sprite colors for this SpriteBatch.'
+                }
+            }
+        },
+        {
+            name = 'setDrawRange',
+            description = 'Restricts the drawn sprites in the SpriteBatch to a subset of the total.',
+            variants = {
+                {
+                    arguments = {
+                        {
+                            type = 'number',
+                            name = 'start',
+                            description = 'The index of the first sprite to draw. Index 1 corresponds to the first sprite added with SpriteBatch:add.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'count',
+                            description = 'The number of sprites to draw.'
+                        }
+                    }
+                },
+                {
+                    description = 'Allows all sprites in the SpriteBatch to be drawn.'
+                }
+            }
+        },
+        {
+            name = 'setLayer',
+            description = 'Changes the sprite in the SpriteBatch',
+            variants = {
+                {
+                    arguments = {
+                        {
+                            type = 'number',
+                            name = 'spriteindex',
+                            description = 'The index of the existing sprite to replace.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'layerindex',
+                            description = 'The index of the layer to use for this sprite.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'x',
+                            description = 'The position to draw the object (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'y',
+                            description = 'The position to draw the object (y-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'r',
+                            default = '0',
+                            description = 'Orientation (radians).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'sx',
+                            default = '1',
+                            description = 'Scale factor (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'sy',
+                            default = 'sx',
+                            description = 'Scale factor (y-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'ox',
+                            default = '0',
+                            description = 'Origin offset (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'oy',
+                            default = '0',
+                            description = 'Origin offset (y-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'kx',
+                            default = '0',
+                            description = 'Shear factor (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'ky',
+                            default = '0',
+                            description = 'Shear factor (y-axis).'
+                        }
+                    }
+                },
+                {
+                    arguments = {
+                        {
+                            type = 'number',
+                            name = 'spriteindex',
+                            description = 'The index of the existing sprite to replace.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'layerindex',
+                            description = 'The index of the layer to use for this sprite.'
+                        },
+                        {
+                            type = 'Quad',
+                            name = 'quad',
+                            description = 'The subsection of the texture\'s layer to use when drawing the sprite.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'x',
+                            description = 'The position to draw the object (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'y',
+                            description = 'The position to draw the object (y-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'r',
+                            default = '0',
+                            description = 'Orientation (radians).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'sx',
+                            default = '1',
+                            description = 'Scale factor (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'sy',
+                            default = 'sx',
+                            description = 'Scale factor (y-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'ox',
+                            default = '0',
+                            description = 'Origin offset (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'oy',
+                            default = '0',
+                            description = 'Origin offset (y-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'kx',
+                            default = '0',
+                            description = 'Shear factor (x-axis).'
+                        },
+                        {
+                            type = 'number',
+                            name = 'ky',
+                            default = '0',
+                            description = 'Shear factor (y-axis).'
+                        }
+                    }
+                },
+                {
+                    arguments = {
+                        {
+                            type = 'number',
+                            name = 'spriteindex',
+                            description = 'The index of the existing sprite to replace.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'layerindex',
+                            description = 'The index of the layer to use for this sprite.'
+                        },
+                        {
+                            type = 'Transform',
+                            name = 'transform',
+                            description ='A transform object'
+                        }
+                    }
+                },
+                {
+                    arguments = {
+                        {
+                            type = 'number',
+                            name = 'spriteindex',
+                            description = 'The index of the existing sprite to replace.'
+                        },
+                        {
+                            type = 'number',
+                            name = 'layerindex',
+                            description = 'The index of the layer to use for this sprite.'
+                        },
+                        {
+                            type = 'Quad',
+                            name = 'quad',
+                            description = 'The subsection of the texture\'s layer to use when drawing the sprite.'
+                        },
+                        {
+                            type = 'Transform',
+                            name = 'transform',
+                            description ='A transform object'
+                        }
+                    }
                 }
             }
         },
