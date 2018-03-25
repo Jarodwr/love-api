@@ -60,13 +60,59 @@ return {
                         },
                         {
                             type = 'number',
-                            name = '...',
-                            description = 'Additional matrix elements.'
+                            name = 'e1_3',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e1_4',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e2_1',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e2_2',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e2_3',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e2_4',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e3_1',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e3_2',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e3_3',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e3_4',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e4_1',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e4_2',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e4_3',
                         },
                         {
                             type = 'number',
                             name = 'e4_4',
-                            description = 'The fourth column of the fourth row of the matrix.'
                         },
                     }
                 }
@@ -201,13 +247,59 @@ return {
                         },
                         {
                             type = 'number',
-                            name = '...',
-                            description = 'Additional matrix elements.'
+                            name = 'e1_3',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e1_4',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e2_1',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e2_2',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e2_3',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e2_4',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e3_1',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e3_2',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e3_3',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e3_4',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e4_1',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e4_2',
+                        },
+                        {
+                            type = 'number',
+                            name = 'e4_3',
                         },
                         {
                             type = 'number',
                             name = 'e4_4',
-                            description = 'The fourth column of the fourth row of the matrix.'
                         },
                     },
                     returns = {

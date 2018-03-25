@@ -803,6 +803,9 @@ return {
         {
             name = 'flushBatch',
             description = 'Immediately renders any pending automatically batched draws.\n\nLÖVE will call this function internally as needed when most state is changed, so it is not necessary to manually call it.\n\nThe current batch will be automatically flushed by love.graphics state changes (except for the transform stack and the current color), as well as Shader:send and methods on Textures which change their state. Using a different Image in consecutive love.graphics.draw calls will also flush the current batch.\n\nSpriteBatches, ParticleSystems, Meshes, and Text objects do their own batching and do not affect automatic batching of other draws.',
+            variants = {
+                {}
+            }
         },
         {
             name = 'getBackgroundColor',
@@ -3576,6 +3579,7 @@ return {
         require(path .. 'enums.BlendMode'),
         require(path .. 'enums.CanvasFormat'),
         require(path .. 'enums.CompareMode'),
+        require(path .. 'enums.CullMode'),
         require(path .. 'enums.DrawMode'),
         require(path .. 'enums.FilterMode'),
         require(path .. 'enums.GraphicsFeature'),
@@ -3584,9 +3588,12 @@ return {
         require(path .. 'enums.LineStyle'),
         require(path .. 'enums.MeshDrawMode'),
         require(path .. 'enums.ParticleInsertMode'),
+        require(path .. 'enums.PixelFormat'),
         require(path .. 'enums.SpriteBatchUsage'),
         require(path .. 'enums.StackType'),
         require(path .. 'enums.StencilAction'),
+        require(path .. 'enums.TextureType'),
+        require(path .. 'enums.VertexWinding'),
         require(path .. 'enums.WrapMode')
     }
 }

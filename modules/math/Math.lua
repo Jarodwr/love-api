@@ -910,6 +910,7 @@ return {
         }
     },
     enums = {
-        require(path .. 'enums.CompressedDataFormat')
+        require(path .. 'enums.CompressedDataFormat'),
+        require(path .. 'enums.MatrixLayout')
     }
 }
